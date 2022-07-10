@@ -98,7 +98,7 @@ function resolveComponent(name: string, options: ElementPlusResolverOptionsResol
     return {
       name,
       // Fix issue with Nuxt: https://github.com/element-plus/element-plus-nuxt-starter/issues/17
-      from: `element-plus/${ssr ? (nuxt ? 'dist/index.full.js' : 'lib') : 'es'}`,
+      from: `element-plus/${ssr ? (nuxt ? 'es' : 'lib') : 'es'}`,
       sideEffects: getSideEffects(partialName, options),
     }
   }
